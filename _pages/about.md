@@ -40,5 +40,11 @@ My research interest includes Software Engineering (SE) and Deep Learning (DL). 
 - *2022.07* 第八届“创于精微，臻于不凡”微科创大赛 第一作者 院级一等奖
 
 # 📖 Educations
-- *2021.09 - 2025.06（now）*, 就读于 扬州大学 信息工程学院（人工智能学院） 计算机科学与技术专业 
+- *2021.09 - 2025.06（now）*, 就读于 扬州大学 信息工程学院（人工智能学院） 计算机科学与技术专业
+
+# 💬 Invited Talks
+- None
+
+# 💻 Internships
+- None
 
