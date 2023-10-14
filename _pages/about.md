@@ -49,9 +49,3 @@ My research interest includes neural machine translation and computer vision. I 
 # 📖 Educations
 - *2021.09 - 2025.06（now）*, 就读于 扬州大学 信息工程学院（人工智能学院） 计算机科学与技术专业 
 
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
-
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
