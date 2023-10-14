@@ -47,11 +47,7 @@ My research interest includes neural machine translation and computer vision. I 
 - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
 # 📖 Educations
-<<<<<<< HEAD
-- *2021.09 - 2025.06 (now)*, 就读于 扬州大学 信息工程学院（人工智能学院） 计算机科学与技术专业 
-=======
-- *2021.09 - 2025.06 扬州大学
->>>>>>> 589391c ( 提交信息)
+- *2021.09 - 2025.06（now）*, 就读于 扬州大学 信息工程学院（人工智能学院） 计算机科学与技术专业 
 
 # 💬 Invited Talks
 - *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
