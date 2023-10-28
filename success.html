@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>完成问卷</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 30px;
+            border: 2px solid #b4d9ff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-image: linear-gradient(to bottom, #fff, #f2f2f2);
+            animation: gradient 15s ease-in-out infinite;
+            max-width: 600px;
+            width: 90%;
+        }
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        h1 {
+            color: black;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+        button {
+            background-color: #b4d9ff;
+            color: ghostwhite;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        button:hover {
+            background-color: #2497BA;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>感谢您的反馈！</h1>
+    <button onclick="window.history.back()">返回</button>
+</div>
+</body>
+</html>

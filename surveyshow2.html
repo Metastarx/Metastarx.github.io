@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>用户问卷调查结果</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 添加背景色和渐变 */
+        body {
+            background-color: #fafafa;
+            background-image: linear-gradient(to bottom right, #d5f5f6, #f5e5d5);
+            font-family: Arial, sans-serif;
+        }
+        /* 表格样式 */
+        table {
+            border-collapse: collapse;
+            margin: 50px auto;
+            box-shadow: 0px 0px 10px #999999;
+            background-color: white;
+            animation: fadeIn 1s;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #444444;
+        }
+        /* 标题样式 */
+        h1 {
+            text-align: center;
+            color: #555555;
+            animation: zoomIn 1s;
+        }
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+    </style>
+    <script>
+        // 获取表格和分页容器
+        const table = document.querySelector('table');
+        const paginationContainer = document.getElementById('pagination-container');
+
+        // 获取每页要显示的数据行数
+        const rowsPerPage = 3;
+
+        // 获取表格中的所有行，除了表头
+        const rows = Array.from(table.querySelectorAll('tr:not(:first-child)'));
+
+        // 计算总页数
+        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+        // 生成分页链接
+        for (let i = 1; i <= totalPages; i++) {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.textContent = i;
+            a.href = '#';
+            li.appendChild(a);
+            paginationContainer.querySelector('ul').appendChild(li);
+        }
+
+        // 给每个分页链接添加点击事件处理函数
+        paginationContainer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                // 获取当前点击的分页链接的页码
+                const currentPage = parseInt(link.textContent);
+                // 显示当前页的数据，隐藏其他数据
+                rows.forEach((row, i) => {
+                    if (i >= (currentPage - 1) * rowsPerPage && i < currentPage * rowsPerPage) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+                // 给当前分页链接添加'active'类，移除其他分页链接的'active'类
+                paginationContainer.querySelectorAll('a').forEach(otherLink => {
+                    if (otherLink.textContent === link.textContent) {
+                        otherLink.classList.add('active');
+                    } else {
+                        otherLink.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // 默认显示第一页的数据
+        paginationContainer.querySelector('a').click();
+    </script>
+    <style>
+        /* 分页样式 */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .pagination li {
+            margin: 0 5px;
+        }
+        .pagination a {
+            display: block;
+            padding: 5px 10px;
+            border: 1px solid #dddddd;
+            border-radius: 3px;
+            text-decoration: none;
+            color: #333333;
+        }
+        .pagination a:hover {
+            background-color: #f2f2f2;
+        }
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .pagination a {
+            padding: 5px 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .pagination a.previous,
+        .pagination a.next {
+            background-color: #eee;
+            border-radius: 3px;
+        }
+
+        .pagination a.previous:hover,
+        .pagination a.next:hover {
+            background-color: #ddd;
+        }
+
+        .pagination a.page {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        .pagination a.page.active {
+            background-color: #333;
+            color: #fff;
+        }
+
+
+
+
+
+    </style>
+
+
+
+
+</head>
+<body>
+<h1>用户问卷调查结果</h1>
+<table>
+
+    <tr>
+        <th>用户</th>
+        <th>邮箱</th>
+        <th>流畅度</th>
+        <th>便捷度</th>
+        <th>清晰度</th>
+        <th>满意度</th>
+        <th>整体使用体验如何</th>
+        <th>功能是否齐全</th>
+        <th>是否存在问题</th>
+    </tr>
+    <tr>
+        <td>203321231</td>
+        <td>3185413068@qq.com</td>
+        <td>十分流畅</td>
+        <td>非常便捷</td>
+        <td>非常清晰</td>
+        <td>比较满意</td>
+        <td>很好</td>
+        <td>用户界面友好，功能齐全，用起来很舒服。</td>
+        <td>使用过程中没有任何问题</td>
+    </tr>
+    <tr>
+        <td>202222123</td>
+        <td>1119036507@qq.com</td>
+        <td>十分流畅</td>
+        <td>非常便捷</td>
+        <td>非常清晰</td>
+        <td>比较满意</td>
+        <td>体验很好</td>
+        <td>功能齐全，使用体验很好</td>
+        <td>运行过程中没有问题</td>
+    </tr>
+
+    <div class="pagination">
+        <a href="#" class="previous">&laquo; Previous</a>
+        <a href="surveyShow.html" class="page ">1</a>
+        <a href="surveyshow2.html" class="page active">2</a>
+        <a href="#" class="page">3</a>
+        <a href="#" class="page">4</a>
+        <a href="#" class="page">5</a>
+        <a href="#" class="next">Next &raquo;</a>
+    </div>
+
+
+    </div>
+</table>
+
+</body>
+</html>
